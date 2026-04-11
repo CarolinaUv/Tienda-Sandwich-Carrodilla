@@ -290,3 +290,79 @@ footer a:hover {
   }
 
 }
+
+/* FOOTER MOBILE */
+.footer-contenido {
+  grid-template-columns: 1fr;
+  text-align: center;
+  gap: 25px;
+}
+
+.footer-contenido > div {
+  width: 100%;
+}
+
+footer a {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.seguinos img {
+  margin: 10px auto;
+  display: block;
+}
+
+.ubicacion iframe {
+  height: 180px;
+}
+
+footer {
+  overflow: hidden;
+}
+
+/* HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #4a2c00;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    text-align: center;
+    background: white;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+}
