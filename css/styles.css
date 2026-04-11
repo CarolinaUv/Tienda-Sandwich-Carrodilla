@@ -44,30 +44,27 @@ section {
 .logo {
   display: flex;
   justify-content: center;
-  padding: 0px 60px 0px 60px;
+  padding: 0 60px;
 }
 
 .logo img {
-  height: 200px; /* 👈 un poco más grande */
+  height: 200px;
 }
 
-/* links generales */
+/* links */
 .nav-links {
   display: flex;
   gap: 100px;
 }
 
-/* izquierda */
 .nav-links.left {
   justify-content: flex-end;
 }
 
-/* derecha */
 .nav-links.right {
   justify-content: flex-start;
 }
 
-/* === ENLACES === */
 .nav-links a {
   color: #4a2c00;
   font-size: larger;
@@ -80,35 +77,14 @@ section {
   color: #c23b22;
 }
 
-/* SCROLL FIX */
 section {
   scroll-margin-top: 100px;
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Logo arriba, links abajo */
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #f3e0c0;
-    width: 200px;
-    padding: 15px;
-    display: none; /* luego puedes controlar esto con JS si haces menú hamburguesa */
-  }
 }
 
 /* HERO */
 .hero {
   height: 90vh;
-  background: url(../img/hero2.png)  center/cover;
+  background: url(../img/hero2.png) center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +106,6 @@ section {
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  transition: color 0.3s;
 }
 
 .hero-btn:hover {
@@ -140,12 +115,6 @@ section {
 /* NOSOTROS */
 .nosotros {
   padding: 80px 20px;
-}
-
-.nosotros-titulo {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
 }
 
 .nosotros-container {
@@ -160,7 +129,6 @@ section {
   flex: 1;
   font-size: 18px;
   line-height: 1.6;
-  color: #444;
 }
 
 .nosotros-galeria {
@@ -175,9 +143,7 @@ section {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
-
 
 /* PRODUCTOS */
 .productos {
@@ -189,17 +155,14 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  align-items: stretch;
 }
 
 .producto-card {
   background: white;
   padding: 15px;
   border-radius: 10px;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .producto-card img {
@@ -209,24 +172,6 @@ section {
   border-radius: 10px;
 }
 
-.precio {
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.asterisco {
-  font-size: 0.8em;
-  vertical-align: super;
-}
-
-.nota-precios {
-  font-size: 13px;
-  color: #777;
-  margin-top: 15px;
-  text-align: center;
-}
-
-/* BOTÓN WHATSAPP */
 .btn-wsp {
   display: inline-block;
   background: #c23b22;
@@ -234,14 +179,12 @@ section {
   padding: 10px;
   border-radius: 5px;
   text-decoration: none;
-
   margin-top: auto;
 }
 
-.btn-wsp :hover {
+.btn-wsp:hover {
   color: #b99892;
 }
-
 
 /* CONTACTO */
 .contacto {
@@ -259,180 +202,53 @@ section {
   text-decoration: none;
 }
 
-/* LOGIN (adaptado del React) */
-.login-box {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.login-box input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 250px;
-}
-
-.login-box button {
-  background-color: #c23b22;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 /* FOOTER */
 footer {
   background-color: #222;
   color: #fff;
-  padding: 40px 20px 20px;
-  margin-top: 40px;
+  padding: 40px 20px;
 }
 
-/* CONTENEDOR PRINCIPAL */
 .footer-contenido {
   max-width: 1200px;
   margin: auto;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
-/* TÍTULOS */
-footer h3 {
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-/* LINKS */
 footer a {
-  display: block;
   color: #ccc;
   text-decoration: none;
-  margin-bottom: 10px;
-  transition: 0.3s;
 }
 
 footer a:hover {
   color: #fff;
 }
 
-/* WHATSAPP (lo destacamos un poco) */
-.informacion a[href*="wa.me"] {
-  background: #25D366;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-.informacion a[href*="wa.me"]:hover {
-  background: #1ebe5d;
-}
-
-/* INSTAGRAM */
-.seguinos img {
-  width: 35px;
-  transition: transform 0.3s;
-}
-
-.seguinos img:hover {
-  transform: scale(1.1);
-}
-
-/* AVISO LEGAL */
-
-.aviso-legal {
-  background-color: #f9f6f1;
-  padding: 60px 20px;
-  color: #4a2c00;
-}
-
-.aviso-legal .container {
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* título principal */
-.aviso-legal h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-/* subtítulos */
-.aviso-legal h2 {
-  margin-top: 25px;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  border-left: 4px solid #c0392b;
-  padding-left: 10px;
-}
-
-/* texto */
-.aviso-legal p {
-  line-height: 1.6;
-  margin-bottom: 15px;
-  font-size: 0.95rem;
-}
-
-/* MAPA */
-.ubicacion iframe {
-  width: 100%;
-  height: 200px;
-  border-radius: 10px;
-}
-
-/* COPYRIGHT */
-footer p {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #aaa;
-}
-
-/* COPYRIGHT */
-footer p {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #aaa;
-}
-
-@media (max-width: 768px) {
-  footer > div {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .seguinos img {
-    margin: auto;
-  }
-}
-
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
 @media (max-width: 768px) {
 
-  /* NAVBAR */
   .navbar {
-    grid-template-columns: 1fr;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
-    padding: 10px;
+  }
+
+  .logo {
+    padding: 0;
   }
 
   .logo img {
-    height: 110px;
+    height: 90px;
   }
 
   .nav-links {
+    gap: 15px;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
   }
 
@@ -441,43 +257,33 @@ footer p {
     justify-content: center;
   }
 
-  /* HERO */
-  .hero {
-    height: 70vh;
-    background-position: center;
+  .nav-links a {
+    font-size: 14px;
   }
 
-  /* NOSOTROS */
+  .hero {
+    height: 60vh;
+    padding: 20px;
+  }
+
   .nosotros-container {
     flex-direction: column;
-    gap: 20px;
-  }
-
-  .nosotros-galeria {
-    grid-template-columns: 1fr 1fr;
   }
 
   .nosotros-galeria img {
     height: 140px;
   }
 
-  /* PRODUCTOS */
   .productos-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .producto-card img {
-    height: 200px;
-  }
-
-  /* FOOTER */
   .footer-contenido {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  /* BOTONES */
   .btn-wsp {
     width: 100%;
     text-align: center;
