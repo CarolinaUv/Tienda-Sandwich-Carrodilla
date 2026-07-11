@@ -274,6 +274,36 @@ section {
   color: #b99892;
 }
 
+.categoria-productos{
+    width:100%;
+    margin:70px 0 35px;
+    text-align:center;
+    position:relative;
+}
+
+.categoria-productos h3{
+    display:inline-block;
+    padding:0 30px;
+    background:#fff;
+    color:#8B4513;
+    font-size:2rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    position:relative;
+    z-index:2;
+}
+
+.categoria-productos::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    height:2px;
+    background:#d8c3a5;
+    z-index:1;
+}
 /* =========================
    CONTACTO
 ========================= */
