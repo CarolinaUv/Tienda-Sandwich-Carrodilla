@@ -9,7 +9,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<script>
+function moverCarrusel(direccion) {
+  const carrusel = document.getElementById("carruselBoxDulce");
 
+  const ancho = carrusel.clientWidth;
+
+  carrusel.scrollBy({
+    left: direccion * ancho,
+    behavior: "smooth"
+  });
+}
+</script>
 <body>
   <a href="https://wa.me/5492616614461?text=Hola%20quiero%20hacer%20un%20pedido"
    class="whatsapp-float"
@@ -283,13 +294,33 @@
     </div>
 
     <div class="producto-card">
-      <img src="./img/boxdulce.jpeg">
-      <h3>Box dulce</h3>
-      <p>Box con taza, infusiones, jugo, alfajores de maicena, tarta según disponibilidad, 4 sándwiches de miga, bowl de frutas y Bon o Bon.</p>
-      <a class="btn-wsp" href="https://wa.me/5492616614461?text=Hola quiero pedir información acerca de " target="_blank">
-        Consultanos por WhatsApp
-      </a>
+
+  <div class="carrusel-box">
+    <button class="flecha izquierda" onclick="moverCarrusel(-1)">‹</button>
+
+    <div class="carrusel-contenedor" id="carruselBoxDulce">
+      <img src="./img/boxdulce1.jpeg" alt="Box dulce">
+      <img src="./img/boxdulce2.jpeg" alt="Box dulce">
     </div>
+
+    <button class="flecha derecha" onclick="moverCarrusel(1)">›</button>
+  </div>
+
+  <h3>Box dulce</h3>
+
+  <p>
+    Box con taza, infusiones, jugo, alfajores de maicena,
+    tarta según disponibilidad, 4 sándwiches de miga,
+    bowl de frutas y Bon o Bon.
+  </p>
+
+  <a class="btn-wsp"
+     href="https://wa.me/5492616614461?text=Hola quiero pedir información acerca de "
+     target="_blank">
+    Consultanos por WhatsApp
+  </a>
+
+</div>
 
   </div>
 
